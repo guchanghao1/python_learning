@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .op {
+            border: 1px black solid;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+
+        #start {
+            border: 1px red solid;
+            width: 150px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+<div id="A">
+    <div id="start">开始抽奖</div>
+
+    <div class="op">手机</div>
+    <div class="op">电脑</div>
+    <div class="op">iPad</div>
+    <div class="op">耳机</div>
+
+    <div class="op">苹果</div>
+    <div class="op">100万</div>
+    <div class="op">购物卡</div>
+    <div class="op">美女</div>
+</div>
+</body>
+
+<script>
+
+    var start = document.getElementById("start")
+    var kk = document.getElementsByClassName("op")
+
+    start.onclick = function () {
+        var time = 3000;
+        var dsq = setInterval(function () {
+                //   先整体变白
+                for (var a = 0; a < kk.length; a++) {
+                    kk[a].style.backgroundColor = "white";
+                }
+                // 再随机的变背景颜色
+                var i = parseInt(Math.random(0, 1) * 8);
+                kk[i].style.backgroundColor = 'blue';
+                console.log(time)
+
+
+                // 时间逐渐减少
+                time -= 50;
+                console.log(time)
+
+                if (time == 0) {
+                    // 停止间隔定时器
+                    clearInterval(dsq)
+                }
+            }
+
+
+            , 50)
+    }
+
+
+</script>
+</html>

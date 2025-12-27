@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // 99乘法表
+    function f(n) {
+        for (i = 1; i <= n; i++) {
+
+            let row = ""
+
+            for (j = 1; j <= i; j++) {
+                row += `${i}x${j}=${i * j}\t`
+            }
+            console.log(row)
+        }
+    }
+
+    f(9)
+
+
+    // 输出：
+    //     *
+    //    **
+    //   ***
+    //  ****
+    // *****
+    function f1(n) {
+        for (let i = 1; i <= n; i++) {
+
+            let row = ''
+            //  拼接空格
+            for (let j = 1; j <= n - i; j++) {
+                row += ' ';
+            }
+
+            // 拼接*
+            for (let j = 1; j <= i; j++) {
+                row += "*";
+            }
+            console.log(row)
+        }
+
+
+    }
+
+    f1(8)
+
+</script>
+</body>
+</html>

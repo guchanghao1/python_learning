@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            border: 1px solid gray;
+            width: 200px;
+            height: 140px;
+            margin: auto;
+            padding: 5px;
+        /*  调整边框的小圆角  */
+            border-radius: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            float: right;
+        }
+
+        .a1 {
+            color: deepskyblue;
+        }
+
+        .a2 {
+            color: gray;
+        }
+
+        span{
+            /*border: 1px solid red;*/
+            border-bottom: 5px solid purple;
+            padding-bottom: 6px;
+        }
+
+        .i1{
+            border:1px solid gray;
+            border-radius: 5px;
+            width: 190px;
+        }
+
+        .i2{
+            background-color: deepskyblue;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <span>请登录</span>
+    <a class="a1" href="">立即注册</a>
+    <!--水平分割线-->
+    <hr>
+    <input class="i1" type="text" placeholder="请输入手机号">
+    <br>
+    <input class="i1" type="password" placeholder="请输入密码">
+    <br>
+    <input type="checkbox">自动登录
+    <a class="a2" href="">忘记密码?</a>
+    <br>
+    <input class="i1 i2" type="button" value="登录">
+</div>
+</body>
+</html>

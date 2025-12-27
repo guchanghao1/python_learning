@@ -1,0 +1,38 @@
+.content{
+    width: 1000px;
+    height: 800px;
+    margin: 0 auto;
+}
+
+
+.content .left{
+    width: 20%;
+    height: 80px;
+    float: left;
+    font-size: 30px;
+    text-align: center;
+    line-height: 80px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    background-color: rgb(129, 129, 214);;
+}
+
+
+.content .right{
+    float: right;
+    width:80% ;
+    height: 700px;
+    position: relative;
+    top: 80px;
+}
+
+.content .right img{
+    width: 30%;
+    height: 220px;
+}
+
+.content .right .item div{
+    float: right;
+    width: 69%;
+    height: 200px;
+}

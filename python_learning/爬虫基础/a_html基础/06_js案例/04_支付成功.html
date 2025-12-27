@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>支付界面</title>
+    <style>
+        div {
+            border: 1px solid gray;
+            width: 200px;
+            padding-left: 20px;
+        }
+
+        #s1 {
+            font-size: 40px;
+            color: red;
+        }
+
+        #btn {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+<div>
+    <h2>恭喜你 支付成功</h2>
+
+    <span id="s1">5</span>
+
+    <span id="s2">秒后自动返回首页</span>
+
+    <br>
+    <br>
+    <button id="btn">立即返回</button>
+
+</div>
+</body>
+
+<script>
+    var btn = document.getElementById("btn")
+    // 点击按钮就跳转
+    btn.onclick = function () {
+        location.href = 'https://www.taobao.com'
+    }
+
+    <!--在网页加载完毕后立刻执行事件-->
+    window.onload = function () {
+        /* 从5开始倒计时 */
+        var num = 5
+        // 间隔定时器 间隔1秒让这个数减1
+        setInterval(
+            function () {
+                // 获取这个数的标签
+                var s1 = document.getElementById("s1")
+                s1.innerText = num;
+                num--;
+                if (num == 0) {
+                    location.href = 'https://www.taobao.com'
+                }
+            }
+            , 1000)
+    }
+
+</script>
+</html>

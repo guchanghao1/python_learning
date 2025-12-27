@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>验证码</title>
+    <style>
+        div {
+            width: 250px;
+            height: 150px;
+            border: 1px solid gray;
+            margin: auto;
+            padding: 20px;
+        }
+
+        i {
+            border: 1px solid gray;
+            background-color: lightskyblue;
+            font-size: 20px;
+        }
+
+        button {
+            width: 80px;
+            margin-left: 80px;
+        }
+    </style>
+</head>
+
+<body>
+<div>
+    <p>
+        <!-- 存验证码 -->
+        <i>111</i>
+        <span>看不清换一张</span>
+    </p>
+    验证码：<input type="text">
+    <br>
+    <br>
+    <button>确定</button>
+</div>
+</body>
+
+<script>
+    <!-- 生成验证码   -->
+    function get_code() {
+        var code = ''
+        var arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        // i 控制次数 也就是长度
+        for (var i = 1; i <= 6; i++) {
+            // 要随机的拼接6个  0 - 36 之间的一个随机整数
+            var num = parseInt(Math.random(0, 1) * 36)
+            code += arr[num]
+        }
+        console.log(code)
+        return code
+    }
+
+    var span = document.getElementsByTagName('span')
+    var i = document.getElementsByTagName('i')
+
+    // 刷新页面，换验证码
+    window.onload = function () {
+        i[0].innerText = get_code()
+    }
+
+    // 点击看不清 换验证码
+    span[0].onclick = function () {
+        i[0].innerText = get_code()
+    }
+
+
+    // 点击按钮 判断输入的验证码是否正确
+    var btn = document.getElementsByTagName("button")
+    btn[0].onclick = function () {
+        // 获取输入框的值
+        var yzm = document.getElementsByTagName("input")
+       var user = yzm[0].value
+        console.log(user)
+
+        if(user == i[0].innerText){
+            alert("验证码正确")
+        }else{
+            alert("验证码错误")
+            yzm[0].value = ""
+        }
+    }
+
+
+</script>
+</html>
