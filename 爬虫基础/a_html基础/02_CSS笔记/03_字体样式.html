@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .div1 {
+            /*solid 实线*/
+            border: red dashed 1px;
+            color: red;
+            font-size: 20px;
+            font-family: "楷体";
+            /*加粗*/
+            font-weight: bold;
+            /*倾斜*/
+            font-style: italic;
+
+            /*  宽  */
+            width: 200px;
+            /*  高 */
+            height: 100px;
+
+            /*  设置文本 不换行  */
+            white-space: nowrap;
+
+            /*  设置超出去的部分隐藏  */
+            overflow: hidden;
+
+            /*  超出去的部分用省略号  */
+            text-overflow: ellipsis;
+        }
+
+        #div2 {
+            border: 1px blue solid;
+            width: 70%;
+            height: 100px;
+            /*  水平居中  */
+            text-align: center;
+            /*  垂直居中 跟height的值一样 */
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="div1">人生得意须尽欢，莫使金樽空对月</div>
+<br>
+<div id="div2">天生我材必有用，千金散去还复来</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--https://0xedward.github.io/dom-visualizer/-->
+
+<div id="test">
+    我是奶龙
+</div>
+
+
+<div class="ikun">
+    唱 跳 rap 篮球
+</div>
+
+
+<div class="ikun">
+    小黑子
+</div>
+
+<p name="f">哈哈哈</p>
+
+</body>
+</html>
+
+
+<script>
+    <!--  document 文档对象  -->
+    // id属性的值是唯一的
+    // obj = document.getElementById("test")
+    // console.log(obj)
+
+    obj2 = document.getElementsByClassName("ikun")
+    console.log(obj2)
+    console.log(obj2.length)
+
+    // obj3 = document.getElementsByTagName("div")
+    // console.log(obj3[2])
+
+    // console.log(document.getElementsByName("f")[0])
+
+    // 调整标签的颜色和字体的大小
+    // obj2[0].style.color = "red"
+    // obj2[1].style.fontSize = "30px"
+
+    for (i = 0; i < obj2.length; i++) {
+        obj2[i].style.color = "blue"
+    }
+
+    // 修改内容
+    obj2[1].innerText = "are you ok?"
+
+    // 修改html标签
+    obj2[0].innerHTML = "<h1>ok</h1>"
+
+</script>

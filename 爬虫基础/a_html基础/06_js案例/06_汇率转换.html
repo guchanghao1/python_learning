@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            border: 1px solid black;
+            width: 300px;
+            height: 250px;
+            margin: auto;
+            border-radius: 50px;
+        }
+
+        p {
+            font-size: 25px;
+            padding-left: 80px;
+        }
+
+        #A {
+            margin-left: 60px;
+            margin-bottom: 10px;
+
+        }
+
+        #D {
+            margin-left: 60px;
+
+        }
+
+        select {
+            margin-left: 30px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            margin-left: 20px;
+            background-color: deepskyblue;
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+<div>
+    <p><b>汇率转换器</b></p>
+    <input type="text" placeholder="请输入金额" id="A"><br>
+
+    <select id="B">
+        <option value="CNY">人民币</option>
+        <option value="USD">美元</option>
+        <option value="EUR">欧元</option>
+        <option value="GBP">英镑</option>
+        <option value="KRW">韩元</option>
+        <option value="JPY">日元</option>
+    </select>
+
+    <span> -------- ></span>
+
+    <select id="C">
+        <option value="CNY">人民币</option>
+        <option value="USD">美元</option>
+        <option value="EUR">欧元</option>
+        <option value="GBP">英镑</option>
+        <option value="KRW">韩元</option>
+        <option value="JPY">日元</option>
+    </select><br>
+
+    <input type="text" id="D">
+
+    <p>
+        <button id="but">确定转换</button>
+    </p>
+
+</div>
+
+<script>
+    var dic = {
+        "CNY": {"USD": 0.1414, "EUR": 0.1216, "GBP": 0.1072, "KRW": 200.73, "JPY": 21.6571, "CNY": 1.0},
+        "USD": {"CNY": 7.1162, "EUR": 0.94, "GBP": 0.82, "KRW": 1338.5, "JPY": 146.8, "USD": 1.0},
+        "EUR": {"CNY": 7.75, "USD": 1.06, "GBP": 0.87, "KRW": 1420.2, "JPY": 155.7, "EUR": 1.0},
+        "GBP": {"CNY": 8.93, "USD": 1.22, "EUR": 1.15, "KRW": 1632.8, "JPY": 179.0, "GBP": 1.0},
+        "KRW": {"CNY": 0.00545, "USD": 0.000747, "EUR": 0.000704, "GBP": 0.000612, "JPY": 0.1096, "KRW": 1.0},
+        "JPY": {"CNY": 0.0498, "USD": 0.00681, "EUR": 0.00642, "GBP": 0.00559, "KRW": 9.12, "JPY": 1.0}
+    }
+
+    var but = document.getElementById("but")
+    but.onclick = function () {
+        //     获取 框框
+        var A = document.getElementById("A").value;
+        var B = document.getElementById("B").value;
+        var C = document.getElementById("C").value;
+        var D = document.getElementById("D");
+
+        // 获取利率
+        var CNY = dic[B][C]
+
+        //  计算汇率
+        var result = A * CNY
+
+        //  获取最后的结果
+        D.value = result
+
+
+    }
+</script>
+</body>
+</html>

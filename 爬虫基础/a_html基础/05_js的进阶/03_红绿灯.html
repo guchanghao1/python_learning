@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<div id="red"></div>
+<div id="yellow"></div>
+<div id="green"></div>
+
+
+<script>
+    red = document.getElementById("red")
+    yellow = document.getElementById("yellow")
+    green = document.getElementById("green")
+
+    console.log(red)
+    console.log(yellow)
+    console.log(green)
+
+    //  初始化灯的状态为红灯
+    cureentState = 'red';
+
+    function changeLight() {
+        if (cureentState == 'red') {
+            //     只亮红灯
+            red.style.backgroundColor = "red";
+            yellow.style.backgroundColor = "";
+            green.style.backgroundColor = "";
+            //  定时器，控制时间，改状态
+            setTimeout(function () {
+                cureentState = 'yellow';
+                changeLight();
+            }, 5000)
+
+        } else if (cureentState == 'green') {
+            //     只亮绿灯
+            green.style.backgroundColor = "green";
+            red.style.backgroundColor = "";
+            yellow.style.backgroundColor = "";
+            setTimeout(function () {
+                cureentState = 'red';
+                changeLight();
+            }, 5000)
+
+        } else if (cureentState == 'yellow') {
+            //    只亮黄灯
+            yellow.style.backgroundColor = "yellow";
+            red.style.backgroundColor = "";
+            green.style.backgroundColor = "";
+            setTimeout(function () {
+                cureentState = 'green';
+                changeLight()
+            }, 5000)
+        }
+    }
+
+    changeLight()
+
+
+</script>
+</body>
+</html>

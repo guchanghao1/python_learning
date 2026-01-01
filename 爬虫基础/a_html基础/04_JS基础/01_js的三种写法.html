@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+
+
+<!--外部书写 引入外部的js文件-->
+<script src="01.js"></script>
+
+
+
+
+<!--写个按钮，点击按钮触发事件-->
+<!--行内书写-->
+<input type="button" value="提交1" onclick="alert('我喜欢你')"> </input>
+
+<!--点击提交2触发test函数-->
+<button onclick="test()"> 提交2</button>
+<p onclick="alert('我喜欢你')">提交</p>
+
+</body>
+</html>
+
+
+<!--script 标签里用来写 js代码-->
+<!--内部书写-->
+<script>
+    <!--  弹出一个警告框  -->
+    // 定义一个函数，函数的功能就是弹出一个警告框
+    function test() {
+        alert("内部书写  天涯何处无芳草，何必单恋一枝花")
+    }
+
+    // 调用函数  函数名()
+    // test();
+
+</script>
+
+
+<!--如果是执行的话，谁在后面就执行谁 -->
+<!--如果按住ctrl键点击这个函数，那么谁在前面就找到谁！-->
+
+
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <p class="p1">蔡徐坤</p>
+        <p id="bb">宝宝</p>
+        <p xxx="zz">小姐姐</p>
+    </div>
+
+
+</body>
+</html>
+
+
+https://0xedward.github.io/dom-visualizer/
+
+取p标签的文本
+p/text()
+div/p/text()
+html/body/div/p/text()  [蔡徐坤,宝宝,小姐姐]
+
+p[2]/text()
+div/p[2]/text()
+html/body/div/p[2]/text()  [宝宝]
+
+
+
+取属性class的值
+p/@class
+
+
+# 根据标签的属性去定位  id class  name  ......
+p[@id='bb']/text()      [宝宝]
+p[@class='p1']/text()   [蔡徐坤]
+p[@xxx='zzz']/text()   [小姐姐]

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+
+<script>
+    <!--  自定义一个函数 f  -->
+    function f() {
+        console.log("hello")
+    }
+
+    // 调用函数f
+    // f()
+
+
+    function f1(a, b) {
+        console.log(a + b)
+    }
+
+    // f1(1,2)
+
+    function f2(a = 1, b) {
+        console.log("a=", a)
+        console.log("b=", b)
+        console.log(a - b)
+    }
+
+    // f2(100,10)
+
+
+    function f3(x, y = 6) {
+        console.log("x=", x)
+        console.log("y=", y)
+        console.log("x*y=", x * y)
+    }
+
+    f3(3)
+
+
+    //   在网页上打印
+    li = [1, 2, 3]
+    document.write("<h1 style=\"color: red\">大标题</h1>")
+
+
+    //  输入框
+    a = prompt("提示：请输入你的姓名")
+    console.log(a)
+    
+    document.write(a)
+</script>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="test">
+    请点击 有效果哦
+</div>
+
+<script>
+    obj = document.getElementById("test")
+    console.log(obj)
+
+    //   鼠标的点击
+    obj.onclick = function () {
+        alert("奥利给")
+    }
+
+
+    //   鼠标的移入 onmouseover
+    obj.onmouseover = function () {
+        obj.style.backgroundColor = 'red'
+    }
+
+
+    //    鼠标的移出 onmouseout
+    obj.onmouseout = function () {
+        obj.style.backgroundColor = 'blue'
+    }
+
+
+    //     定时器 setTimeout 等待几秒再去执行函数
+    //     function f() {
+    //         console.log("I am ok")
+    //     }
+
+    // 直接用setTimeout  单位是毫秒
+    // setTimeout(f,5000)
+
+    //     匿名函数的方式
+    // setTimeout(function () {
+    //     console.log('I love you')
+    // }, 3000)
+    //
+
+    //     间隔定时器 setInterval 重复执行
+    setInterval(function () {
+        console.log('I love you')
+    }, 3000)
+
+</script>
+</body>
+</html>

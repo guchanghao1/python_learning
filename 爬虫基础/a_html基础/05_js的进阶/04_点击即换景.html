@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            border: 2px solid gray;
+            margin-left: 20px;
+        }
+
+        img:hover {
+            border-color: black;
+        }
+    </style>
+</head>
+<body>
+<div class="image">
+    <img src="img/1.jpg">
+    <img src="img/2.jpg">
+    <img src="img/3.jpg">
+    <img src="img/4.jpg">
+</div>
+</body>
+<script>
+    images = document.getElementsByTagName("img")
+    for (i = 0; i < images.length; i++) {
+        let img = images[i]
+        // console.log(img)
+        // 点击标签就触发换背景的函数
+        img.onclick = function () {
+            // console.log(img)
+            let bgurl = img.getAttribute("src")
+            // console.log(bgurl)
+            document.body.style.backgroundImage = `url(${bgurl})`
+            document.body.style.backgroundSize = 'cover'
+
+        }
+
+    }
+</script>
+</html>

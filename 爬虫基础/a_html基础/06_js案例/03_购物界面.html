@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购买</title>
+    <style>
+        div {
+            border: 1px solid black;
+            width: 200px;
+            padding: 20px;
+        }
+
+        button {
+            margin-left: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>商品 Iphone17 pro max</p>
+        <p>原价 9999</p>
+        <p>现价 99</p>
+
+        <button id="zf">支付</button>
+        <button id="qx">取消</button>
+    </div>
+</body>
+
+<script>
+    var zf = document.getElementById('zf')
+    var qx = document.getElementById('qx')
+
+    qx.onclick = function (){
+        alert("你确定要取消吗？")
+    }
+
+    zf.onclick = function () {
+        // window.confirm 确认框
+        var user = window.confirm("确认支付吗？")
+        console.log(user)
+        if(user==true){
+        //     弹出支付成功界面
+            location.href = '04_支付成功.html'
+        }else{
+            alert("取消")
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

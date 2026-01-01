@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input {
+            width: 60px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <!--第一个数-->
+    <input type="text" id="A">
+
+    <!--select 选择框  下拉菜单-->
+    <!--符号-->
+    <select id="fh">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+
+    <!--第二个数-->
+    <input type="text" id="B">
+
+    <span>=</span>
+
+    <!--结果-->
+    <input type="text" id="C">
+
+    <br>
+    <br>
+    <button>计算</button>
+
+
+    <script>
+        var btn = document.getElementsByTagName("button")
+
+        //     点击按钮后 计算
+        btn[0].onclick = function () {
+        var a = parseInt(document.getElementById("A").value)
+
+        var fh = document.getElementById("fh").value
+
+        var b = parseInt(document.getElementById("B").value)
+
+            if (fh == '+') {
+                var res = a + b;
+            } else if (fh == '-') {
+                var res = a - b;
+            } else if (fh == '*') {
+                var res = a * b;
+            } else {
+                var res = a / b;
+            }
+            console.log(res)
+            // 显示结果
+            var result = document.getElementById("C").value = res
+        }
+    </script>
+</div>
+</body>
+</html>

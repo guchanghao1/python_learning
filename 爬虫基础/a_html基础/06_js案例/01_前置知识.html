@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .bbb {
+            color: red;
+        }
+    </style>
+
+</head>
+<body>
+
+<p id="A">你好</p>
+
+<script>
+    var number = "666"
+    console.log(number, typeof (number))
+
+    //   字符串 转 整数类型
+    number = parseInt(number)
+    console.log(number, typeof (number))
+
+
+    //   整数 转 字符串
+    number = 888
+    number = number.toString()
+    console.log(number, typeof (number))
+
+
+    //  随机数      0- 10 之间的整数
+    var x = parseInt(Math.random(0, 1) * 10)
+    console.log(x)
+
+    result = parseInt("666.999")
+    console.log(result)
+
+//     获取 p 标签
+    var p = document.getElementById("A")
+    console.log(p)
+
+    p.onclick = function () {
+    //     获取p标签的属性
+        var res = p.getAttribute("class")
+        console.log(res)
+    //     如果没有class  打印null
+        if(res == null){
+        //     设置 p 标签的属性 class=bbb
+            p.setAttribute("class","bbb")
+        }else{
+        //     有class的情况，删掉class
+            p.removeAttribute("class")
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+/*上 头部样式*/
+.head {
+    /*border: 1px solid red;*/
+    width: 100%;
+    height: 600px;
+    background-image: url("../img/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+
+
+/*后代选择器*/
+.head nav {
+    /*border: 1px solid red;*/
+    height: 100px;
+    top: 140px;
+    /*  相对移动 相对于原来的位置移动  */
+    position: relative;
+    background-color: rgb(129, 129, 129, 0.5);
+}
+
+
+.head nav .left {
+    /*border: 1px solid black;*/
+    float: left;
+    width: 300px;
+    height: 100px;
+    font-family: 楷体;
+    font-size: 35px;
+    font-weight: bold;
+    background-color: white;
+    border-bottom-right-radius: 100px;
+    text-align: center;
+    line-height: 100px;
+}
+
+.head nav .right {
+    /*border: 1px solid black;*/
+    float: right;
+    margin-right: 150px;
+}
+
+.head nav .right a {
+    /*border: 1px solid black;*/
+    text-decoration: none;
+    color: black;
+    width: 150px;
+    height: 45px;
+    /* 把行内标签 改成行内的块级标签，才可以去设置宽高  */
+    display: inline-block;
+    font-size: 25px;
+    margin-top: 30px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+/* 鼠标上移的时候会有特殊的效果，移走后还原，伪类效果 */
+.head nav .right a:hover {
+    background-color: white;
+    border-radius: 20px;
+    color: green;
+}
+
+
+/*中间 主体样式*/
+.main {
+    /*border: 1px solid black;*/
+    width: 1200px;
+    height: 1200px;
+    margin: 0 auto;
+}
+
+.main .top {
+    /*border: 1px solid red;*/
+    width: 100%;
+    height: 400px;
+}
+
+.main .top .left {
+    float: left;
+    /*border: 1px solid black;*/
+    width: 49%;
+    height: 400px;
+    font-size: 25px;
+}
+
+.main .top .right {
+    width: 50%;
+    height: 100%;
+    /*border: 1px solid blue;*/
+    float: right;
+    background-image: url("../img/congri.jpg");
+    background-size: cover;
+}
+
+.main .bottom {
+    /*border: 1px solid black;*/
+    width: 100%;
+    height: 280px;
+}
+
+
+.main .bottom .item {
+    /*border: 1px solid red;*/
+    float: left;
+    width: 300px;
+    height: 100%;
+    background-image: url("../img/account.png");
+    background-size: cover;
+    /*  相对移动  */
+    position: relative;
+/*  超出的部分隐藏  */
+    overflow: hidden;
+}
+
+.main .bottom .item .mark {
+    /*border: 1px solid black;*/
+    width: 100%;
+    height: 100px;
+    font-size: 25px;
+    text-align: center;
+    background-color: skyblue;
+    bottom: -100px;
+    /*   绝对移动 */
+    position: absolute;
+}
+
+/*触发了父级标签的伪类效果，但是实际上更改的是子集标签的样式*/
+.main .bottom .item:hover .mark {
+    bottom: 100px;
+}
+
+/*下 底部*/
+.foot{
+    /*border: 1px solid black;*/
+    width: 100%;
+    height: 300px;
+}
+
+.foot .contact{
+    /*border: 1px solid black;*/
+    width: 1000px;
+    height: 260px;
+    margin: 0 auto;
+    font-size: 30px;
+    background-color: rgb(113, 113, 207,0.5);
+}
+
+.foot .contact p{
+    color: white;
+    text-align: center;
+}
+
+.foot .contact a{
+    color: white;
+    text-decoration: none;
+    margin-left: 100px;
+    padding: 25px;
+}
+.foot .contact a:hover{
+    color: green;
+}
+
+.foot .cr{
+    text-align: center;
+    font-size: 25px;
+}
